@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Maxie ♡ Misty</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <header class="top">
+      <div>
+        <p class="tiny">OUR LITTLE SYSTEM</p>
+        <h1>Maxie <span>♡</span> Misty</h1>
+      </div>
+
+      <button class="heart-button" onclick="showStats()">♡</button>
+      </header>
+
+
+    <section class="total-card">
+
+      <p>WSPÓLNE PUNKTY</p>
+
+      <div class="total-points">
+        <span id="totalPoints">0</span>
+        <span class="star">★</span>
+      </div>
+
+      <div class="people">
+
+        <div class="person">
+          <div class="avatar maxie">M</div>
+          <div>
+            <strong>Maxie</strong>
+            <small><span id="maxiePoints">0</span> pkt</small>
+          </div>
+        </div>
+
+        <div class="person">
+          <div class="avatar misty">M</div>
+          <div>
+            <strong>Misty</strong>
+            <small><span id="mistyPoints">0</span> pkt</small>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <div class="person-switch">
+
+      <button id="maxieButton" class="active" onclick="selectPerson('Maxie')">
+        Maxie
+      </button>
+
+      <button id="mistyButton" onclick="selectPerson('Misty')">
+        Misty
+      </button>
+
+    </div>
+
+
+    <section class="section">
+
+      <div class="section-title">
+        <div>
+          <p class="tiny">TODAY</p>
+          <h2>Dzisiaj</h2>
+        </div>
+
+        <span id="todayPoints">0 pkt</span>
+      </div>
+
+
+      <div class="tasks" id="tasks"></div>
+
+    </section>
+
+
+    <section class="stats-card">
+
+      <div>
+        <p class="tiny">SMALL WINS</p>
+        <h2>Wasze małe zwycięstwa</h2>
+      </div>
+
+      <div class="stat-row">
+        <span>🏠 Zadania wykonane</span>
+        <strong id="completedTasks">0</strong>
+      </div>
+
+      <div class="stat-row">
+        <span>⭐ Punkty razem</span>
+        <strong id="statsTotal">0</strong>
+      </div>
+
+    </section>
+
+
+    <button class="reset-button" onclick="resetData()">
+      Resetuj dane
+    </button>
+
+  </div>
+
+
+  <div id="toast" class="toast">
+    +1 ⭐
+  </div>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
